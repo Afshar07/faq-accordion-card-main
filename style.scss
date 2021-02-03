@@ -1,0 +1,42 @@
+/* Variables */
+
+$primary-text-color: rgb(29, 30, 53);
+$hover-text-color: rgb(244, 124, 87);
+$drk-gray-text-color: rgb(74, 75, 94);
+$lgt-gray-text-color: rgb(120, 120, 135);
+$divider-color: rgb(231, 231, 233);
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+* {
+  font-size: 12px;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100%;
+  background: rgb(101, 101, 231);
+  background: linear-gradient(
+    0deg,
+    rgba(101, 101, 231, 1) 0%,
+    rgba(175, 103, 233, 1) 100%
+  );
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
