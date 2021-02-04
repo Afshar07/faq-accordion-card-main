@@ -36,14 +36,20 @@ body {
   align-items: center;
 }
 
-main {
-  display: flex;
-}
-
 .card {
   background-color: white;
   width: 720px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+
+  &__left-col {
+    width: 50%;
+  }
+
+  &__bg-img {
+    width: 100%;
+  }
 
   &__title {
     font-size: 2.5em;
