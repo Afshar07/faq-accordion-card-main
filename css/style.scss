@@ -61,7 +61,7 @@ body {
     display: inline-block;
     overflow: hidden;
     padding: 7em 10em 7em 2em;
-    background-image: url('/images/bg-pattern-desktop.svg');
+    background-image: url('../images/bg-pattern-desktop.svg');
     background-repeat: no-repeat;
     background-position: 125% 70%;
   }
@@ -206,7 +206,7 @@ footer {
     }
 
     &__left-col {
-      background-image: url('/images/bg-pattern-mobile.svg');
+      background-image: url('../images/bg-pattern-mobile.svg');
       padding: 0 0 10em 0;
       background-position: 50% 10%;
     }
@@ -215,7 +215,7 @@ footer {
       position: absolute;
       top: -9em;
       left: 4em;
-      content: url('/images/illustration-woman-online-mobile.svg');
+      content: url('../images/illustration-woman-online-mobile.svg');
     }
 
     &__img-box {
