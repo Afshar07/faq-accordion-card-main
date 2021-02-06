@@ -73,10 +73,14 @@ body {
           flex: 1;
 }
 
-.card__img-main {
+.card__img-main-desktop {
   position: relative;
   right: 9em;
   bottom: 2em;
+}
+
+.card__img-main-mobile {
+  display: none;
 }
 
 .card__img-box {
@@ -228,11 +232,14 @@ footer {
     padding: 0 0 10em 0;
     background-position: 50% 10%;
   }
-  .card__img-main {
+  .card__img-main-desktop {
+    display: none;
+  }
+  .card__img-main-mobile {
+    display: inline;
     position: absolute;
     top: -9em;
     left: 4em;
-    content: url("../images/illustration-woman-online-mobile.svg");
   }
   .card__img-box {
     display: none;
