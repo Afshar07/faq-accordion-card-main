@@ -39,38 +39,61 @@ body {
 
 .card {
   background-color: white;
-  width: 920px;
-  padding: 8em;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
+  width: 900px;
 }
 
 .card__left-col {
-  width: 49%;
-  position: relative;
-  right: 10em;
   display: inline-block;
+  overflow: hidden;
+  background-image: url(/images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 150% 65%;
 }
 
-.card__bg-img {
-  width: 100%;
+.card__left-col, .card__right-col {
+  padding: 5em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.card__img-main {
+  position: relative;
+  right: 10em;
+  bottom: 2em;
 }
 
 .card__title {
   color: #1d1e35;
-  font-size: 2.5em;
+  font-size: 3em;
+  margin-bottom: 1em;
 }
 
 .card__right-col {
-  width: 49%;
   display: inline-block;
+  margin-right: 5em;
+}
+
+.card__details {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  margin: 1em 0 1em 0;
 }
 
 .card__summary-title {
   color: #4a4b5e;
   font-size: 1.2em;
-  line-height: 1em;
-  margin: 1em 0 1em 0;
+}
+
+.card__arrow {
+  float: right;
 }
 
 .card--remove-arrow {

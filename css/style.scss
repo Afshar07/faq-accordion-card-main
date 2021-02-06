@@ -38,37 +38,55 @@ body {
 
 .card {
   background-color: white;
-  width: 920px;
-  padding: 8em;
   border-radius: 10px;
+  display: flex;
   position: relative;
+  width: 900px;
 
   &__left-col {
-    width: 49%;
-    position: relative;
-    right: 10em;
     display: inline-block;
+    overflow: hidden;
+    background-image: url(/images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: 150% 65%;
   }
 
-  &__bg-img {
-    width: 100%;
+  &__left-col,
+  &__right-col {
+    padding: 5em;
+    flex: 1;
+  }
+
+  &__img-main {
+    position: relative;
+    right: 10em;
+    bottom: 2em;
   }
 
   &__title {
     color: $primary-text-color;
-    font-size: 2.5em;
+    font-size: 3em;
+    margin-bottom: 1em;
   }
 
   &__right-col {
-    width: 49%;
     display: inline-block;
+    margin-right: 5em;
+  }
+
+  &__details {
+    display: inline-flex;
+    width: 100%;
+    margin: 1em 0 1em 0;
   }
 
   &__summary-title {
     color: $drk-gray-text-color;
     font-size: 1.2em;
-    line-height: 1em;
-    margin: 1em 0 1em 0;
+  }
+
+  &__arrow {
+    float: right;
   }
 
   // remove arrows from details elements
