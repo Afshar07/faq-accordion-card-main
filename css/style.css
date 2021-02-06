@@ -39,19 +39,17 @@ body {
 
 .card {
   background-color: white;
-  width: 720px;
+  width: 920px;
+  padding: 8em;
   border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  position: relative;
 }
 
 .card__left-col {
-  width: 50%;
+  width: 49%;
+  position: relative;
+  right: 10em;
+  display: inline-block;
 }
 
 .card__bg-img {
@@ -59,11 +57,42 @@ body {
 }
 
 .card__title {
+  color: #1d1e35;
   font-size: 2.5em;
 }
 
 .card__right-col {
-  padding: 2em;
+  width: 49%;
+  display: inline-block;
+}
+
+.card__summary-title {
+  color: #4a4b5e;
+  font-size: 1.2em;
+  line-height: 1em;
+  margin: 1em 0 1em 0;
+}
+
+.card--remove-arrow {
+  list-style: none;
+}
+
+.card--remove-arrow::-webkit-details-marker {
+  display: none;
+}
+
+.card__summary-title:hover {
+  color: #f47c57;
+  cursor: pointer;
+}
+
+.card__summary-content {
+  color: #787887;
+  font-size: 1.2em;
+}
+
+.card__hr {
+  color: #e7e7e9;
 }
 
 .attribution {

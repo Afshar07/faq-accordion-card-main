@@ -38,13 +38,16 @@ body {
 
 .card {
   background-color: white;
-  width: 720px;
+  width: 920px;
+  padding: 8em;
   border-radius: 10px;
-  display: flex;
-  flex-direction: row;
+  position: relative;
 
   &__left-col {
-    width: 50%;
+    width: 49%;
+    position: relative;
+    right: 10em;
+    display: inline-block;
   }
 
   &__bg-img {
@@ -52,11 +55,43 @@ body {
   }
 
   &__title {
+    color: $primary-text-color;
     font-size: 2.5em;
   }
 
   &__right-col {
-    padding: 2em;
+    width: 49%;
+    display: inline-block;
+  }
+
+  &__summary-title {
+    color: $drk-gray-text-color;
+    font-size: 1.2em;
+    line-height: 1em;
+    margin: 1em 0 1em 0;
+  }
+
+  // remove arrows from details elements
+  &--remove-arrow {
+    list-style: none;
+  }
+
+  &--remove-arrow::-webkit-details-marker {
+    display: none;
+  }
+
+  &__summary-title:hover {
+    color: $hover-text-color;
+    cursor: pointer;
+  }
+
+  &__summary-content {
+    color: $lgt-gray-text-color;
+    font-size: 1.2em;
+  }
+
+  &__hr {
+    color: $divider-color;
   }
 }
 
