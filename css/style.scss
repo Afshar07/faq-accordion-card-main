@@ -8,6 +8,8 @@ $divider-color: rgb(231, 231, 233);
 
 $primary-font: 'Kumbh Sans', sans-serif;
 
+/* Globals */
+
 html {
   box-sizing: border-box;
   height: 100%;
@@ -24,6 +26,8 @@ html {
   box-sizing: inherit;
 }
 
+/* Body */
+
 body {
   min-height: 100%;
   background: rgb(101, 101, 231);
@@ -36,7 +40,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  // controls the animation in the media query
+  transition: transform 0.2s;
 }
+
+/* Styling for card */
 
 .card {
   background-color: white;
@@ -45,6 +54,7 @@ body {
   position: relative;
   -webkit-box-shadow: 1px 15px 23px 0px rgba(0, 0, 0, 0.33);
   box-shadow: 1px 15px 23px 0px rgba(0, 0, 0, 0.33);
+  left: 2em;
   width: 950px;
 
   &__left-col {
@@ -118,6 +128,8 @@ body {
     cursor: pointer;
   }
 
+  // animation for summary content text
+
   @keyframes appear {
     from {
       opacity: 0;
@@ -141,7 +153,7 @@ body {
     border-top: 1px solid $divider-color;
   }
 
-  //classes for JS event listener
+  // classes for JS event listener
   &--arrow-rotate {
     transform: rotate(180deg);
   }
@@ -163,4 +175,71 @@ body {
 
 footer {
   margin-top: 5rem;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1100px) and (min-width: 750px) {
+  body {
+    transform: scale(0.7);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    transform: none;
+    transition: none;
+  }
+
+  .card {
+    flex-direction: column;
+    margin: 10em 4em 0 0;
+    width: 375px;
+
+    &__title {
+      text-align: center;
+    }
+
+    &__left-col,
+    &__right-col {
+      flex: none;
+    }
+
+    &__left-col {
+      background-image: url(/images/bg-pattern-mobile.svg);
+      padding: 0 0 10em 0;
+      background-position: 50% 10%;
+    }
+
+    &__img-main {
+      position: absolute;
+      top: -9em;
+      left: 4em;
+      content: url(/images/illustration-woman-online-mobile.svg);
+    }
+
+    &__img-box {
+      display: none;
+    }
+
+    &__right-col {
+      width: 100%;
+      padding: 0 3em;
+      margin: 0em 0em 6em 0em;
+    }
+  }
+
+  footer {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  body {
+    transform: scale(0.8);
+  }
+
+  .card {
+    margin-top: 3em;
+  }
 }
