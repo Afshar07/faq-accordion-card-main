@@ -16,6 +16,7 @@
     <div class="card">
       <div class="card__left-col">
         <img class="card__img-main" src="images/illustration-woman-online-desktop.svg" alt="Woman looking at a screen">
+        <img src="images/illustration-box-desktop.svg" class="card__img-box">
       </div>
       <div class="card__right-col">
         <header class="card__header">
@@ -62,6 +63,35 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://aemann2.github.io/portfolio/">Adam Mann</a>.
   </footer>
+  <script>
+    const summaries = document.querySelectorAll("summary");
+    const details = document.querySelectorAll("details");
+    // close all details other than the one currently selected
+    details.forEach((targetDetail) => {
+      targetDetail.addEventListener("click", () => {
+        details.forEach((detail) => {
+          if (detail !== targetDetail) {
+            detail.removeAttribute("open");
+          }
+        });
+      });
+    });
+    // adds style classes to selected summary
+    summaries.forEach((targetSummary) => {
+      targetSummary.addEventListener("click", () => {
+        summaries.forEach((summary) => {
+          summary.classList.toggle("card--font-weight-increase");
+          summary.children[0].classList.toggle("card--arrow-rotate");
+          // if the selected summary is not the one clicked, remove the styling class from the class list
+          if (summary !== targetSummary) {
+            summary.classList.remove("card--font-weight-increase");
+            summary.children[0].classList.remove("card--arrow-rotate");
+          }
+        });
+      });
+    });
+
+  </script>
 </body>
 
 </html>

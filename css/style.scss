@@ -6,6 +6,8 @@ $drk-gray-text-color: rgb(74, 75, 94);
 $lgt-gray-text-color: rgb(120, 120, 135);
 $divider-color: rgb(231, 231, 233);
 
+$primary-font: 'Kumbh Sans', sans-serif;
+
 html {
   box-sizing: border-box;
   height: 100%;
@@ -13,7 +15,7 @@ html {
 
 * {
   font-size: 12px;
-  font-family: 'Kumbh Sans', sans-serif;
+  font-family: $primary-font;
 }
 
 *,
@@ -41,37 +43,48 @@ body {
   border-radius: 10px;
   display: flex;
   position: relative;
-  width: 900px;
+  -webkit-box-shadow: 1px 15px 23px 0px rgba(0, 0, 0, 0.33);
+  box-shadow: 1px 15px 23px 0px rgba(0, 0, 0, 0.33);
+  width: 950px;
 
   &__left-col {
     display: inline-block;
     overflow: hidden;
+    padding: 7em 10em 7em 2em;
     background-image: url(/images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
-    background-position: 150% 65%;
+    background-position: 125% 70%;
   }
 
   &__left-col,
   &__right-col {
-    padding: 5em;
     flex: 1;
   }
 
   &__img-main {
     position: relative;
-    right: 10em;
+    right: 9em;
     bottom: 2em;
+  }
+
+  &__img-box {
+    position: absolute;
+    bottom: 12.5em;
+    left: -11em;
+  }
+
+  &__right-col {
+    display: inline-block;
+    align-self: center;
+    justify-self: center;
+    height: 400px;
+    margin: 0 7em 3em 0;
   }
 
   &__title {
     color: $primary-text-color;
     font-size: 3em;
     margin-bottom: 1em;
-  }
-
-  &__right-col {
-    display: inline-block;
-    margin-right: 5em;
   }
 
   &__details {
@@ -82,11 +95,13 @@ body {
 
   &__summary-title {
     color: $drk-gray-text-color;
+    transition: 0.3s color ease-out;
     font-size: 1.2em;
   }
 
   &__arrow {
     float: right;
+    transition: all 0.2s;
   }
 
   // remove arrows from details elements
@@ -103,21 +118,46 @@ body {
     cursor: pointer;
   }
 
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
   &__summary-content {
     color: $lgt-gray-text-color;
     font-size: 1.2em;
+    margin-bottom: 0;
+    line-height: 1.5em;
+    animation-name: appear;
+    animation-duration: 0.5s;
   }
 
   &__hr {
-    color: $divider-color;
+    border-top: 1px solid $divider-color;
+  }
+
+  //classes for JS event listener
+  &--arrow-rotate {
+    transform: rotate(180deg);
+  }
+
+  &--font-weight-increase {
+    font-weight: 700;
   }
 }
 
 .attribution {
   text-align: center;
+  font-size: 1.5em;
 }
 
 .attribution a {
+  font-size: 1em;
   color: hsl(228, 45%, 44%);
 }
 
