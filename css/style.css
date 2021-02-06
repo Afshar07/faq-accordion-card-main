@@ -184,15 +184,13 @@ body {
 .attribution {
   text-align: center;
   font-size: 1.5em;
+  justify-self: flex-end;
+  margin-top: 2em;
 }
 
 .attribution a {
   font-size: 1em;
   color: #3e52a3;
-}
-
-footer {
-  margin-top: 5rem;
 }
 
 /* Media Queries */
@@ -248,9 +246,6 @@ footer {
     width: 100%;
     padding: 0 3em;
     margin: 0em 0em 6em 0em;
-  }
-  footer {
-    margin-top: 1rem;
   }
 }
 

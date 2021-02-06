@@ -169,15 +169,13 @@ body {
 .attribution {
   text-align: center;
   font-size: 1.5em;
+  justify-self: flex-end;
+  margin-top: 2em;
 }
 
 .attribution a {
   font-size: 1em;
   color: hsl(228, 45%, 44%);
-}
-
-footer {
-  margin-top: 5rem;
 }
 
 /* Media Queries */
@@ -237,9 +235,9 @@ footer {
     }
   }
 
-  footer {
-    margin-top: 1rem;
-  }
+  // footer {
+  //   margin-top: 1rem;
+  // }
 }
 
 @media screen and (max-width: 415px) {
