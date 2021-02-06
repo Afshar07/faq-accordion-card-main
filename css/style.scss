@@ -40,7 +40,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   // controls the animation in the media query
   transition: transform 0.2s;
 }
@@ -193,6 +192,7 @@ footer {
   body {
     transform: none;
     transition: none;
+    overflow: scroll;
   }
 
   .card {
@@ -249,5 +249,15 @@ footer {
 
   .card {
     margin-top: 3em;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  body {
+    transform: scale(0.65);
+  }
+
+  .card {
+    margin-top: 1em;
   }
 }
