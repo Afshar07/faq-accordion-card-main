@@ -26,6 +26,12 @@ html {
   box-sizing: inherit;
 }
 
+// removing focus outline
+summary:focus,
+details:focus {
+  outline: none;
+}
+
 /* Body */
 
 body {

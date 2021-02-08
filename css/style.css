@@ -18,6 +18,11 @@ html {
           box-sizing: inherit;
 }
 
+summary:focus,
+details:focus {
+  outline: none;
+}
+
 /* Body */
 body {
   min-height: 100%;
